@@ -18,8 +18,11 @@ import 'package:FlutterWidgetGuide/UI/Widgets/ExpandedWidget/expandedWidget.dart
 // WrapWidget
 import 'package:FlutterWidgetGuide/UI/Widgets/WrapWidget/wrapWidget.dart';
 
-// AnimatedContainer
+// AnimatedContainerWidget
 import 'package:FlutterWidgetGuide/UI/Widgets/AnimatedContainerWidget/animatedContainer.dart';
+
+// OpacityWidget
+import 'package:FlutterWidgetGuide/UI/Widgets/OpacityWidget/opacityWidget.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -321,6 +324,81 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: <Widget>[
                                     Text(
                                       'Generally, in Flutter a container is a simple widget with well-defined properties like height, width, and color, etc. Whereas, the AnimatedContainer widget is a simple container widget with animations. These types of widgets can be animated by altering the values of their properties which are the same as the Container widget. These types of animation in Flutter is known as ‘Implicit Animation. We will discuss then in detail in this article by building a simple app with AnimatedContainer widget.',
+                                      style: GoogleFonts.comfortaa(height: 2),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              actions: <Widget>[
+                                PlatformDialogAction(
+                                  child: Text(
+                                    'OK',
+                                    style: GoogleFonts.comfortaa(),
+                                  ),
+                                  actionType: ActionType.Preferred,
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          Divider(),
+
+          Card(
+            elevation: 0.0,
+            child: ListTile(
+              leading: FlutterLogo(),
+              title: FlatButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
+                },
+                child: Text(
+                  'Opacity',
+                  style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
+                ),
+              ),
+              trailing: FittedBox(
+                fit: BoxFit.fill,
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.play_circle_outline),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.code),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidgetCode()));
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.info_outline),
+                      onPressed: () {
+                        showDialog<void>(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return PlatformAlertDialog(
+                              title: Text(
+                                'Opacity',
+                                style: GoogleFonts.comfortaa(fontWeight: FontWeight.bold),
+                              ),
+                              content: SingleChildScrollView(
+                                child: ListBody(
+                                  children: <Widget>[
+                                    Text(
+                                      'The Opacity widget that makes its child partially transparent. This class colors its child into an intermediate buffer and then merges the child back into the scene partially transparent. For values of opacity other than 0.0 and 1.0, this class is relatively expensive as it needs coloring the child into an intermediate buffer. For the value 0.0, the child is simply not colored at all. For the value 1.0, the child is colored without an intermediate buffer.',
                                       style: GoogleFonts.comfortaa(height: 2),
                                     ),
                                   ],
