@@ -22,6 +22,14 @@
 | google_fonts              | 0.4.0          |  This package allows you to easily use any of the 977 fonts from fonts.google.com in your Flutter App.              |
 | platform_alert_dialog     | 1.0.0+2        |  Flutter plugin for build alert dialogs adapted to the current platform.                                            |
 
+#  Releases
+
+Checkout the <a href="https://github.com/kurubaran18/FlutterGuide/releases" target="_blank"><b>releases</b></a>section for Latest APK.
+
+# Latest Release
+
+<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.0" target="_blank"><b>Flutter Guide - V1(1.0.0)</b></a>
+
 # Getting Started - Android
 1.) <a href="https://flutter.dev/docs/get-started/install" target="_blank"><b>Setup Flutter</b></a></br>
 2.) Clone the Repo
