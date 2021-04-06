@@ -1,5 +1,5 @@
 # FlutterGuide
-This Application Might Help You to Learn About Flutter if you are a Beginner in This Space.
+**This application** might **help** you to **learn** about **Flutter** if you are a **beginner** in this **space**.
 
 # Packages Used
 
