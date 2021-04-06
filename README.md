@@ -40,4 +40,4 @@ $ flutter build apk
 5.) Copy the APK file to your device and then install to learn flutter.</br>
 6.) Don't forget to star my Repo.
 </br></br>
-<img src="https://github.com/kurubaran18/FlutterGuide/blob/main/assets/GIF/thankYou.gif"/>
+<img src="https://github.com/kurubaran18/FlutterGuide/blob/main/assets/GIF/thankYou.gif" width="250"/>
