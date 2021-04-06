@@ -24,7 +24,7 @@
 
 #  Releases
 
-Checkout the <a href="https://github.com/kurubaran18/FlutterGuide/releases" target="_blank"><b>releases</b></a>section for Latest APK.
+Checkout the <a href="https://github.com/kurubaran18/FlutterGuide/releases" target="_blank"><b>releases</b></a> section for Latest APK.
 
 # Latest Release
 
