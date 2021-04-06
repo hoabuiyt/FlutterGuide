@@ -1,5 +1,10 @@
+.dart_tool
+.idea
 build
 test
 web
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
 guide.iml
 pubspec.lock
