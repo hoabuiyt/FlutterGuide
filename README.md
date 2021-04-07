@@ -12,6 +12,21 @@
   <li>Copy Source-Code to clipboard.</li>
 </ul>
 
+# List of Widgets
+
+<ul>
+  <li>SAFE AREA</li>
+  </br>
+  <li>EXPANDED</li>
+  </br>
+  <li>WRAP</li>
+  </br>
+  <li>ANIMATED CONTAINER</li>
+  </br>
+  <li>OPACITY</li>
+  </br>
+</ul>
+
 # Dependencies Used
 
 | Package Name              |  Version       |  Description                                                                                                        |
