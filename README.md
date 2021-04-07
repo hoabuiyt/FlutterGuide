@@ -1,5 +1,8 @@
+
 # <img src="https://raw.githubusercontent.com/kurubaran18/FlutterGuide/main/assets/PNG/flutterLogo.png"/>&nbsp;&nbsp;Flutter&nbsp;Guide
 **This application** might **help** you to **learn** about **Flutter** if you are a **beginner** in this **space**.
+
+<img src ="https://github.com/kurubaran18/Assets/blob/main/FlutterGuide/FLUTTER%20GUIDE%20-%20appVersionInfo.png" width="250"/>
 
 # Features
 <ul>
