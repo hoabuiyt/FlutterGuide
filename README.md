@@ -44,6 +44,10 @@ Checkout the <a href="https://github.com/kurubaran18/FlutterGuide/releases" targ
 
 # Latest Release
 
+<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.1" target="_blank"><b>Flutter Guide - V1(1.0.1)</b></a>
+
+# Previous Release
+
 <a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.0" target="_blank"><b>Flutter Guide - V1(1.0.0)</b></a>
 
 # Getting Started - Android
