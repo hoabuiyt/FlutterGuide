@@ -24,6 +24,9 @@ import 'package:FlutterWidgetGuide/UI/Widgets/AnimatedContainerWidget/animatedCo
 // OpacityWidget
 import 'package:FlutterWidgetGuide/UI/Widgets/OpacityWidget/opacityWidget.dart';
 
+// FutureBuilderWidget
+import 'package:FlutterWidgetGuide/UI/Widgets/FutureBuilderWidget/futureBuilderWidget.dart';
+
 class HomeScreen extends StatefulWidget {
 
   @override
@@ -42,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0.5,
         leading: Container(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(15.0),
             child: SvgPicture.asset('assets/SVG/flutterLogo.svg'),
           ),
         ),
@@ -428,6 +431,79 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 
           Divider(),
+
+          Card(
+            elevation: 0.0,
+            child: ListTile(
+              leading: FlutterLogo(),
+              title: FlatButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
+                },
+                child: Text(
+                  'Future Builder',
+                  style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
+                ),
+              ),
+              trailing: FittedBox(
+                fit: BoxFit.fill,
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.play_circle_outline),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.code),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidgetCode()));
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.info_outline),
+                      onPressed: () {
+                        showDialog<void>(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return PlatformAlertDialog(
+                              title: Text(
+                                'Future Builder',
+                                style: GoogleFonts.comfortaa(fontWeight: FontWeight.bold),
+                              ),
+                              content: SingleChildScrollView(
+                                child: ListBody(
+                                  children: <Widget>[
+                                    Text(
+                                      'FutureBuilder Widget is used to create widgets based on the latest snapshot of interaction with a Future.  It is necessary for Future to be obtained earlier either through a change of state or change in dependencies. FutureBuilder is a Widget that will help you to execute some asynchronous function and based on that function’s result your UI will update.\nFutureBuilder is Stateful by nature i.e it maintains its own state as we do in StatefulWidgets.',
+                                      style: GoogleFonts.comfortaa(height: 2),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              actions: <Widget>[
+                                PlatformDialogAction(
+                                  child: Text(
+                                    'OK',
+                                    style: GoogleFonts.comfortaa(),
+                                  ),
+                                  actionType: ActionType.Preferred,
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
 
         ],
       )
