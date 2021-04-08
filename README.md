@@ -33,13 +33,20 @@
 
 # Dependencies Used
 
-| Package Name              |  Version       |  Description                                                                                                        |
+| Dependency Name           |  Version       |  Description                                                                                                        |
 | -------------             | -------------  |  -------------                                                                                                      |
+| bottom_navy_bar           | 6.0.0          |  A beautiful and animated bottom navigation.                                                                        |
+| carousel_slider           | 3.0.0          |  A carousel slider widget.                                                                                          |
 | cupertino_icons           | 1.0.2          |  The following adds the Cupertino Icons font to your Application.                                                   |
 | dart_code_viewer          | 0.0.1          |  The dart_code_viewer package for Flutter allows you to easily show and copy dart code in your Flutter Application. |
-| flutter_svg               | 0.19.3         |  Draw SVG (and some Android VectorDrawable (XML)) files on a Flutter Widget.                                        |
+| get_version               | 0.2.2          |  Get the Version Name, Version Code and App ID on iOS and Android.                                                  |
 | google_fonts              | 0.4.0          |  This package allows you to easily use any of the 977 fonts from fonts.google.com in your Flutter App.              |
+| http                      | 0.12.0+2       |  A composable, Future-based library for making HTTP requests.                                                       |
+| ionicons                  | 0.1.1          |  This package includes 1332 icons of Ionicons v5.4.0.                                                               |
 | platform_alert_dialog     | 1.0.0+2        |  Flutter plugin for build alert dialogs adapted to the current platform.                                            |
+| url_launcher              | 6.0.3          |  A Flutter plugin for launching a URL. Supports iOS, Android, web, Windows, macOS, and Linux.                       |
+| youtube_api               | 0.8.0          |  A Flutter plugin for fetching interacting with YouTube Server to fetch data using API.                             |
+| youtube_player_flutter    | 6.0.3+2        |  Flutter plugin for playing or streaming YouTube videos inline using the official iFrame Player API.                |
 
 #  Releases
 
@@ -47,10 +54,11 @@ Checkout the <a href="https://github.com/kurubaran18/FlutterGuide/releases" targ
 
 # Latest Release
 
-<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.1" target="_blank"><b>Flutter Guide - V1(1.0.1)</b></a>
+<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/2.0.0" target="_blank"><b>Flutter Guide - V2(2.0.0)</b></a>
 
 # Previous Release
-
+<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.1" target="_blank"><b>Flutter Guide - V1(1.0.1)</b></a>
+<br><br>
 <a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.0" target="_blank"><b>Flutter Guide - V1(1.0.0)</b></a>
 
 # Getting Started - Android
@@ -71,4 +79,8 @@ $ flutter build apk
 5.) Copy the APK file to your device and then install to learn flutter.</br>
 6.) Don't forget to star my Repo.
 </br></br>
+# Getting Started - iOS
+
+**Coming Soon!**
+
 <img src="https://github.com/kurubaran18/FlutterGuide/blob/main/assets/GIF/thankYou.gif" width="250"/>
