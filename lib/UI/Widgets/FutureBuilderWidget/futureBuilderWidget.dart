@@ -10,7 +10,7 @@ import 'model/test_model.dart';
 import 'network/testAPI.dart';
 
 // FutureBuilderCode
-export 'package:FlutterWidgetGuide/UI/Widgets/FutureBuilderWidget/ViewCode/futureBuilderWidgetCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/FutureBuilderWidget/ViewCode/futureBuilderWidgetCode.dart';
 
 class FutureBuilderWidget extends StatefulWidget {
   @override
@@ -21,11 +21,13 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   bool _isButtonClicked = false;
   var _buttonIcon = Icons.cloud_download;
   var _buttonText = 'Fetch Data';
-  var _buttonColor = Colors.green;
+  var _buttonColor = Colors.blue;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
@@ -82,6 +84,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
                   textAlign: TextAlign.center,
                 );
             }
+            return CircularProgressIndicator();
           },
         ),
       ),

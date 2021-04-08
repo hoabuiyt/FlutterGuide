@@ -43,7 +43,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //WrapCode
-export 'package:FlutterWidgetGuide/UI/Widgets/WrapWidget/ViewCode/wrapWidgetCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/WrapWidget/ViewCode/wrapWidgetCode.dart';
 
 class WrapWidget extends StatefulWidget {
   @override
@@ -58,6 +58,7 @@ class _WrapWidgetState extends State<WrapWidget> {
   Widget build(BuildContext context) {
     this.context = context;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,

@@ -49,7 +49,7 @@ import 'model/test_model.dart';
 import 'network/testAPI.dart';
 
 // FutureBuilderCode
-export 'package:FlutterWidgetGuide/UI/Widgets/FutureBuilderWidget/ViewCode/futureBuilderWidgetCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/FutureBuilderWidget/ViewCode/futureBuilderWidgetCode.dart';
 
 class FutureBuilderWidget extends StatefulWidget {
   @override
@@ -65,6 +65,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,

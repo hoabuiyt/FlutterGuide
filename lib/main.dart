@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Export Screens
-import 'package:FlutterWidgetGuide/UI/exportScreens.dart';
+import 'UI/exportScreens.dart';
 
 void main() {
   runApp(FlutterWidgetGuide());
@@ -14,7 +14,7 @@ class FlutterWidgetGuide extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Widget Guide',
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 
 // Test Model to Fetch API
-import 'package:FlutterWidgetGuide/UI/Widgets/FutureBuilderWidget/model/test_model.dart';
+import 'package:flutter_widget_guide/UI/Widgets/FutureBuilderWidget/model/test_model.dart';
 
 String url = 'https://jsonplaceholder.typicode.com/posts';
 
