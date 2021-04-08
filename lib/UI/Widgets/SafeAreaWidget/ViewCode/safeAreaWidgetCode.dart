@@ -51,6 +51,7 @@ class _SafeAreaWidgetState extends State<SafeAreaWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         top: _isEnabled,
         bottom: _isEnabled,

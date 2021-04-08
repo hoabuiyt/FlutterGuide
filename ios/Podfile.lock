@@ -1,21 +1,51 @@
 PODS:
   - Flutter (1.0.0)
+  - get_version (0.0.1):
+    - Flutter
+  - package_info (0.0.1):
+    - Flutter
   - path_provider (0.0.1):
+    - Flutter
+  - url_launcher (0.0.1):
+    - Flutter
+  - webview_media (0.0.1):
+    - Flutter
+  - youtube_api (0.2.1):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - get_version (from `.symlinks/plugins/get_version/ios`)
+  - package_info (from `.symlinks/plugins/package_info/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+  - webview_media (from `.symlinks/plugins/webview_media/ios`)
+  - youtube_api (from `.symlinks/plugins/youtube_api/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  get_version:
+    :path: ".symlinks/plugins/get_version/ios"
+  package_info:
+    :path: ".symlinks/plugins/package_info/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+  webview_media:
+    :path: ".symlinks/plugins/webview_media/ios"
+  youtube_api:
+    :path: ".symlinks/plugins/youtube_api/ios"
 
 SPEC CHECKSUMS:
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  get_version: 2bc18c4e26a265571662cab5d38f8b50dc8c1c77
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
+  webview_media: 33604c2c1805f41bd0c6749c4d7de24b8cb4d81d
+  youtube_api: 3e3c2faa0cf3f296204bcc93284cdb097f42cdd6
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // OpacityCode
-export 'package:FlutterWidgetGuide/UI/Widgets/OpacityWidget/ViewCode/opacityWidgetCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/OpacityWidget/ViewCode/opacityWidgetCode.dart';
 
 class OpacityWidget extends StatefulWidget {
   @override
@@ -24,6 +24,7 @@ class _OpacityWidgetState extends State<OpacityWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,

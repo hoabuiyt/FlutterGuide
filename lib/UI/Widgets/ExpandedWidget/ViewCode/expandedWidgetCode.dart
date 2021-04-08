@@ -39,9 +39,6 @@ class ExpandedWidgetCode extends StatelessWidget {
 
 import 'package:flutter/material.dart';
 
-//Flutter SVG
-import 'package:flutter_svg/flutter_svg.dart';
-
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
@@ -65,6 +62,7 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,

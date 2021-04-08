@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-// Flutter SVG
-import 'package:flutter_svg/flutter_svg.dart';
-
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
 // ExpandedCode
-export 'package:FlutterWidgetGuide/UI/Widgets/ExpandedWidget/ViewCode/expandedWidgetCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/ExpandedWidget/ViewCode/expandedWidgetCode.dart';
 
 const List<String> assetNames = <String>[
   'assets/SVG/expanded_info.svg'
@@ -29,6 +26,7 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -67,7 +65,7 @@ class _ExpandedWidgetState extends State<ExpandedWidget> {
                 content: Container(
                   padding: EdgeInsets.all(0),
                   margin: EdgeInsets.all(0),
-                  child: SvgPicture.asset('assets/SVG/expanded_info.svg'),
+                  child: Image.asset('assets/PNG/flutterLogo.png'),
                 ),
               ),
             ),

@@ -1,6 +1,7 @@
 .dart_tool
 .idea
 build
+lib/generated_plugin_registrant.dart
 test
 web
 .flutter-plugins

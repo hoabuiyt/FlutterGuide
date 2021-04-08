@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // SafeAreaCode
-export 'package:FlutterWidgetGuide/UI/Widgets/SafeAreaWidget/ViewCode/safeAreaWidgetCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/SafeAreaWidget/ViewCode/safeAreaWidgetCode.dart';
 
 class SafeAreaWidget extends StatefulWidget {
   @override
@@ -15,6 +15,7 @@ class _SafeAreaWidgetState extends State<SafeAreaWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         top: _isEnabled,
         bottom: _isEnabled,
@@ -34,9 +35,7 @@ class _SafeAreaWidgetState extends State<SafeAreaWidget> {
             ),
 
             ///Press this button to toggle the value of _isEnabled variable
-            RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
+            ElevatedButton(
               onPressed: () => setState(() {
                 _isEnabled == true ? _isEnabled = false : _isEnabled = true;
               }),

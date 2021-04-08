@@ -1,4 +1,4 @@
-name: FlutterWidgetGuide
+name: flutter_widget_guide
 description: This application might help you to learn about Flutter if you are a beginner in this space.
 
 # The following line prevents the package from being accidentally published to
@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.1
+version: 2.0.0
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -24,6 +24,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # BottomNavyBar - [A beautiful and animated bottom navigation. The navigation bar use your current theme, but you are free to customize it] ("https://pub.dev/packages/bottom_navy_bar")
+  bottom_navy_bar: ^6.0.0
+
+  # carousel_slider - [A carousel slider widget] ("https://pub.dev/packages/carousel_slider")
+  carousel_slider: ^3.0.0
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -31,14 +37,29 @@ dependencies:
   # dart_code_viewer - [The dart_code_viewer package for Flutter allows you to easily show and copy dart code in your Flutter application] ("https://pub.dev/packages/dart_code_viewer")
   dart_code_viewer: ^0.0.1
 
-  # flutter_svg - [Draw SVG (and some Android VectorDrawable (XML)) files on a Flutter Widget] ("https://pub.dev/packages/flutter_svg")
-  flutter_svg: ^0.19.3
+  # get_version - [Get the Version Name, Version Code and App ID on iOS and Android] ("https://pub.dev/packages/get_version")
+  get_version: ^0.2.2
 
   # google_fonts - [The google_fonts package for Flutter allows you to easily use any of the 977 fonts (and their variants) from fonts.google.com in your Flutter app] ("https://pub.dev/packages/google_fonts")
   google_fonts: ^0.4.0
 
+  # http - [A composable, Future-based library for making HTTP requests] ("https://pub.dev/packages/http")
+  http: ^0.12.0+2
+
+  # ionicons - [This package includes 1332 icons of Ionicons v5.4.0. The naming convention is the same as the CSS names, all dashes replaced with underscores] ("https://pub.dev/packages/ionicons")
+  ionicons: ^0.1.1
+
   # Platform Alert Dialog - [Flutter plugin for build alert dialogs adapted to the current platform] ("https://pub.dev/packages/platform_alert_dialog")
   platform_alert_dialog: ^1.0.0+2
+
+  # url_launcher - [A Flutter plugin for launching a URL. Supports iOS, Android, web, Windows, macOS, and Linux] ("https://pub.dev/packages/url_launcher")
+  url_launcher: ^6.0.3
+
+  # YouTube API - [A Flutter plugin for fetching interacting with YouTube Server to fetch data using API. Supports iOS and Android] ("https://pub.dev/packages/youtube_api")
+  youtube_api: ^0.8.0
+
+  # youtube_player_flutter - [Flutter plugin for playing or streaming YouTube videos inline using the official iFrame Player API] ("https://pub.dev/packages/youtube_player_flutter")
+  youtube_player_flutter: ^6.0.3+2
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +80,7 @@ flutter:
   assets:
     - assets/SVG/
     - assets/PNG/
+    - assets/CommunityCarousel/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

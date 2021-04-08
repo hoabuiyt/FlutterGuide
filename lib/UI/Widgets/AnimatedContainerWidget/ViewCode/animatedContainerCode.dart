@@ -43,7 +43,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // AnimatedContainerCode
-export 'package:FlutterWidgetGuide/UI/Widgets/AnimatedContainerWidget/ViewCode/animatedContainerCode.dart';
+export 'package:flutter_widget_guide/UI/Widgets/AnimatedContainerWidget/ViewCode/animatedContainerCode.dart';
 
 class AnimatedContainerWidget extends StatefulWidget {
   @override
@@ -63,6 +63,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
