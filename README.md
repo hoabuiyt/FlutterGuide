@@ -39,6 +39,7 @@
 | carousel_slider           | 3.0.0          |  A carousel slider widget.                                                                                          |
 | cupertino_icons           | 1.0.2          |  The following adds the Cupertino Icons font to your Application.                                                   |
 | dart_code_viewer          | 0.0.1          |  The dart_code_viewer package for Flutter allows you to easily show and copy dart code in your Flutter Application. |
+| font_awesome_flutter      | 9.0.0          |  The Font Awesome Icon pack available as set of Flutter Icons.                                                      |
 | get_version               | 0.2.2          |  Get the Version Name, Version Code and App ID on iOS and Android.                                                  |
 | google_fonts              | 0.4.0          |  This package allows you to easily use any of the 977 fonts from fonts.google.com in your Flutter App.              |
 | http                      | 0.12.0+2       |  A composable, Future-based library for making HTTP requests.                                                       |

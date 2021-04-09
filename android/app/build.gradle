@@ -13,12 +13,12 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '2'
+    flutterVersionCode = '3'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
-    flutterVersionName = '2.0.0'
+    flutterVersionName = '3.0.0'
 }
 
 apply plugin: 'com.android.application'
@@ -39,7 +39,7 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        archivesBaseName = "Flutter Guide - V$versionCode($versionName)"
+        archivesBaseName = "FlutterGuide-V$versionCode($versionName)"
     }
 
     buildTypes {
