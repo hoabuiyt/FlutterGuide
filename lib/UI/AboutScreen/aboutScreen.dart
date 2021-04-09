@@ -193,7 +193,7 @@ class _AboutScreenState extends State<AboutScreen> {
 }
 
 _launchPrivacyURL() async {
-  const url = '';
+  const url = 'https://flutter-guide.flycricket.io/privacy.html';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -202,7 +202,7 @@ _launchPrivacyURL() async {
 }
 
 _launchTermsURL() async {
-  const url = '';
+  const url = 'https://flutter-guide.flycricket.io/terms.html';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -211,7 +211,7 @@ _launchTermsURL() async {
 }
 
 _launchPlaystoreURL() async {
-  const url = '';
+  const url = 'https://play.google.com/store/apps/dev?id=7713619486310579176';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

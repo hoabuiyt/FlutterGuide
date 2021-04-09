@@ -1,7 +1,7 @@
 .dart_tool
 .idea
+appIcons
 build
-lib/generated_plugin_registrant.dart
 test
 web
 .flutter-plugins

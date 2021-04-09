@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
+// FontAwesome Icons
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 // Platform Alert Dialog
 import 'package:platform_alert_dialog/platform_alert_dialog.dart';
+
+// URL LAUNCHER
+import 'package:url_launcher/url_launcher.dart';
 
 //** Calling Widgets Screen **//
 
@@ -61,7 +67,6 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                leading: FlutterLogo(),
                 title: TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidget()));
@@ -125,6 +130,10 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                           );
                         },
                       ),
+                      IconButton(
+                        icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        onPressed: _launchSafeAreaWidget,
+                      ),
                     ],
                   ),
                 ),
@@ -136,7 +145,6 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                leading: FlutterLogo(),
                 title: TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidget()));
@@ -200,6 +208,10 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                           );
                         },
                       ),
+                      IconButton(
+                        icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        onPressed: _launchExpandedWidget,
+                      ),
                     ],
                   ),
                 ),
@@ -211,7 +223,6 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                leading: FlutterLogo(),
                 title: TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidget()));
@@ -275,6 +286,10 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                           );
                         },
                       ),
+                      IconButton(
+                        icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        onPressed: _launchWrapWidget,
+                      ),
                     ],
                   ),
                 ),
@@ -286,7 +301,6 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                leading: FlutterLogo(),
                 title: TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidget()));
@@ -350,6 +364,10 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                           );
                         },
                       ),
+                      IconButton(
+                        icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        onPressed: _launchAnimatedContainerWidget,
+                      ),
                     ],
                   ),
                 ),
@@ -361,7 +379,6 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                leading: FlutterLogo(),
                 title: TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
@@ -425,6 +442,10 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                           );
                         },
                       ),
+                      IconButton(
+                        icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        onPressed: _launchOpacityWidget,
+                      ),
                     ],
                   ),
                 ),
@@ -433,10 +454,9 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
 
             Divider(),
 
-            Card(
+            Card (
               elevation: 0.0,
               child: ListTile(
-                leading: FlutterLogo(),
                 title: TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
@@ -500,6 +520,10 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                           );
                         },
                       ),
+                      IconButton(
+                        icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        onPressed: _launchFutureBuilderWidget,
+                      ),
                     ],
                   ),
                 ),
@@ -512,5 +536,61 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
         ),
       )
     );
+  }
+}
+
+//** Calling YouTube URL's for Each Widgets **//
+
+_launchSafeAreaWidget() async {
+  const url = 'https://www.youtube.com/watch?v=lkF0TQJO0bA';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchExpandedWidget() async {
+  const url = 'https://www.youtube.com/watch?v=_rnZaagadyo';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchWrapWidget() async {
+  const url = 'https://www.youtube.com/watch?v=z5iw2SeFx2M';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchAnimatedContainerWidget() async {
+  const url = 'https://www.youtube.com/watch?v=yI-8QHpGIP4';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchOpacityWidget() async {
+  const url = 'https://www.youtube.com/watch?v=9hltevOHQBw';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchFutureBuilderWidget() async {
+  const url = 'https://www.youtube.com/watch?v=ek8ZPdWj4Qo';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
