@@ -82,5 +82,3 @@ $ flutter build apk
 # Getting Started - iOS
 
 **Coming Soon!**
-
-<img src="https://github.com/kurubaran18/FlutterGuide/blob/main/assets/GIF/thankYou.gif" width="250"/>
