@@ -1,6 +1,7 @@
 .dart_tool
 .idea
 appIcons
+build
 test
 web
 .flutter-plugins

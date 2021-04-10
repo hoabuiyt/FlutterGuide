@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-FlutterGuide/from/debuglabs/BuildConfig.java
- FlutterGuide.from.debuglabs.BuildConfig
