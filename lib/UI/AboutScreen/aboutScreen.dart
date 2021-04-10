@@ -51,7 +51,6 @@ class _AboutScreenState extends State<AboutScreen> {
   String _platformVersion = 'Unknown';
   String _projectVersion = '';
   String _projectAppID = '';
-  String _projectName = '';
 
   @override
   void initState() {
@@ -85,14 +84,6 @@ class _AboutScreenState extends State<AboutScreen> {
       projectAppID = 'Failed to get app ID.';
     }
 
-    String projectName;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      projectName = await GetVersion.appName;
-    } on PlatformException {
-      projectName = 'Failed to get app name.';
-    }
-
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
@@ -102,7 +93,6 @@ class _AboutScreenState extends State<AboutScreen> {
       _platformVersion = platformVersion;
       _projectVersion = projectVersion;
       _projectAppID = projectAppID;
-      _projectName = projectName;
     });
   }
 
@@ -138,48 +128,55 @@ class _AboutScreenState extends State<AboutScreen> {
                       height: 10.0,
                     ),
                     new ListTile(
-                      leading: const Icon(Icons.apps),
+                      leading: const Icon(Icons.apps, color: Colors.blue,),
                       title: const Text('App Name'),
-                      subtitle: new Text(_projectName),
+                      subtitle: new Text('Flutter Guide'),
                     ),
                     const Divider(height: 20.0),
                     new ListTile(
-                      leading: const Icon(Icons.dashboard),
+                      leading: const Icon(Icons.dashboard, color: Colors.blue,),
                       title: const Text('App ID'),
-                      subtitle: new Text(_projectAppID),
+                      subtitle: new Text('$_projectAppID'),
                     ),
                     const Divider(height: 20.0),
                     new ListTile(
-                      leading: const Icon(Icons.info),
+                      leading: const Icon(Icons.info, color: Colors.blue,),
                       title: const Text('App Version'),
-                      subtitle: new Text(_projectVersion),
+                      subtitle: new Text('$_projectVersion'),
                     ),
                     const Divider(height: 20.0),
                     new ListTile(
-                      leading: const Icon(Icons.android_rounded),
+                      leading: Icon(Icons.android_rounded, color: Colors.blue,),
                       title: const Text('Running on'),
-                      subtitle: new Text(_platformVersion),
+                      subtitle: new Text('$_platformVersion'),
                     ),
                     const Divider(height: 20.0),
                     new ListTile(
-                      leading: const Icon(Ionicons.logo_google_playstore),
+                      leading: const Icon(Ionicons.logo_google_playstore, color: Colors.blue,),
                       title: const Text('Do you like this App'),
                       subtitle: const Text('Rate Our App on Google Play'),
                       onTap: _launchPlaystoreURL,
                     ),
                     const Divider(height: 20.0),
                     new ListTile(
-                      leading: const Icon(Ionicons.shield_checkmark_outline),
+                      leading: const Icon(Ionicons.shield_checkmark_outline, color: Colors.blue,),
                       title: const Text('Privacy Policy'),
                       onTap: _launchPrivacyURL,
                     ),
                     const Divider(height: 20.0),
                     new ListTile(
-                      leading: const Icon(Ionicons.shield_half_outline),
+                      leading: const Icon(Ionicons.shield_half_outline, color: Colors.blue,),
                       title: const Text('Terms & Conditions'),
                       onTap: _launchTermsURL,
                     ),
                     const Divider(height: 20.0),
+                    SizedBox(height: 25,),
+                    OutlinedButton.icon(
+                      icon: Icon(Ionicons.logo_github, color: Colors.black,),
+                      onPressed: _launchGitHubRepo,
+                      label: Text('Open Sourced on GitHub', style: TextStyle(color: Colors.black),),
+                    ),
+                    SizedBox(height: 25,)
                   ],
                 ),
               ),
@@ -212,6 +209,15 @@ _launchTermsURL() async {
 
 _launchPlaystoreURL() async {
   const url = 'https://play.google.com/store/apps/dev?id=7713619486310579176';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchGitHubRepo() async {
+  const url = 'https://github.com/kurubaran18/FlutterGuide';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

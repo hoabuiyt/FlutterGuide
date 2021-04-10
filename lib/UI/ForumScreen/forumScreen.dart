@@ -16,13 +16,13 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_api/youtube_api.dart';
 
 final List<String> imgList = [
-  'assets/CommunityCarousel/googleGroups.jpeg',
-  'assets/CommunityCarousel/youTube.png',
-  'assets/CommunityCarousel/stackOverflowBanner.jpeg',
-  'assets/CommunityCarousel/slackBanner.jpeg',
-  'assets/CommunityCarousel/mediumBanner.jpeg',
-  'assets/CommunityCarousel/twitterBanner.png',
-  'assets/CommunityCarousel/discordBanner.jpeg',
+  'assets/ForumCarousel/googleGroups.jpeg',
+  'assets/ForumCarousel/youTube.png',
+  'assets/ForumCarousel/stackOverflowBanner.jpeg',
+  'assets/ForumCarousel/slackBanner.jpeg',
+  'assets/ForumCarousel/mediumBanner.jpeg',
+  'assets/ForumCarousel/twitterBanner.png',
+  'assets/ForumCarousel/discordBanner.jpeg',
 ];
 
 class ForumScreen extends StatefulWidget {
@@ -225,40 +225,6 @@ class _ForumScreenState extends State<ForumScreen> {
             Wrap(
               children: <Widget>[
                 OutlinedButton.icon(
-                    onPressed: _launchStackOverflowCommunity,
-                    icon: Image.asset(
-                      'assets/PNG/stackOverflow.png',
-                      width: 24,
-                    ),
-                    label: Text('Stack Overflow')),
-                SizedBox(
-                  width: 5,
-                ),
-                OutlinedButton.icon(
-                    onPressed: _launchSlackCommunity,
-                    icon: Image.asset(
-                      'assets/PNG/slack.png',
-                      width: 24,
-                    ),
-                    label: Text('Slack')),
-                SizedBox(
-                  width: 5,
-                ),
-                OutlinedButton.icon(
-                    onPressed: _launchMediumCommunity,
-                    icon: Image.asset(
-                      'assets/PNG/medium.png',
-                      width: 24,
-                    ),
-                    label: Text('Medium')),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Wrap(
-              children: <Widget>[
-                OutlinedButton.icon(
                     onPressed: _launchTwitterCommunity,
                     icon: Image.asset(
                       'assets/PNG/twitter.png',
@@ -277,6 +243,61 @@ class _ForumScreenState extends State<ForumScreen> {
                     label: Text('Discord')),
               ],
             ),
+            SizedBox(
+              height: 5,
+            ),
+            Wrap(
+              children: <Widget>[
+                OutlinedButton.icon(
+                    onPressed: _launchMediumCommunity,
+                    icon: Image.asset(
+                      'assets/PNG/medium.png',
+                      width: 24,
+                    ),
+                    label: Text('Medium')
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                OutlinedButton.icon(
+                    onPressed: _launchRedditCommunity,
+                    icon: Image.asset(
+                      'assets/PNG/reddit.png',
+                      width: 24,
+                    ),
+                    label: Text('Reddit')
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Wrap(
+              children: <Widget>[
+                OutlinedButton.icon(
+                    onPressed: _launchStackOverflowCommunity,
+                    icon: Image.asset(
+                      'assets/PNG/stackOverflow.png',
+                      width: 24,
+                    ),
+                    label: Text('Stack Overflow')),
+                SizedBox(
+                  width: 5,
+                ),
+                OutlinedButton.icon(
+                    onPressed: _launchSlackCommunity,
+                    icon: Image.asset(
+                      'assets/PNG/slack.png',
+                      width: 24,
+                    ),
+                    label: Text('Slack')
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Divider(),
             SizedBox(
               height: 25,
             ),
@@ -297,19 +318,13 @@ class _ForumScreenState extends State<ForumScreen> {
               height: 10,
             ),
             Center(
-              child: Text(
-                'Catch the highlights of our Keynote in the recap',
-                style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 13),
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Center(
-              child: Text(
-                ' then dig in to all the new features in our latest release.',
-                style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 13),
-              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+                child: Text(
+                  'Catch the highlights of our Keynote in the recap then dig in to all the new features in our latest release.',
+                  style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 13, height: 1.5),
+                ),
+              )
             ),
             SizedBox(
               height: 10,
@@ -422,6 +437,15 @@ _launchSlackCommunity() async {
 
 _launchMediumCommunity() async {
   const url = 'https://medium.com/flutter';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchRedditCommunity() async {
+  const url = 'https://www.reddit.com/r/FlutterDev/';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

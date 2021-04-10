@@ -89,18 +89,21 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+                        tooltip: 'Working',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidget()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
+                        tooltip: 'Code',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidgetCode()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+                        tooltip: 'About',
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -139,6 +142,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        tooltip: 'Watch Video',
                         onPressed: _launchSafeAreaWidget,
                       ),
                     ],
@@ -171,18 +175,21 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+                        tooltip: 'Working',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidget()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
+                        tooltip: 'Code',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidgetCode()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+                        tooltip: 'About',
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -221,6 +228,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        tooltip: 'Watch Video',
                         onPressed: _launchExpandedWidget,
                       ),
                     ],
@@ -253,18 +261,21 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+                        tooltip: 'Working',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidget()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
+                        tooltip: 'Code',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidgetCode()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+                        tooltip: 'About',
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -303,6 +314,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        tooltip: 'Watch Video',
                         onPressed: _launchWrapWidget,
                       ),
                     ],
@@ -334,12 +346,14 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                   child: Row(
                     children: <Widget>[
                       IconButton(
+                        tooltip: 'Working',
                         icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidget()));
                         },
                       ),
                       IconButton(
+                        tooltip: 'Code',
                         icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidgetCode()));
@@ -347,6 +361,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+                        tooltip: 'About',
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -385,6 +400,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        tooltip: 'Watch Video',
                         onPressed: _launchAnimatedContainerWidget,
                       ),
                     ],
@@ -417,18 +433,21 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+                        tooltip: 'Working',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
+                        tooltip: 'Code',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidgetCode()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+                        tooltip: 'About',
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -467,6 +486,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        tooltip: 'Watch Video',
                         onPressed: _launchOpacityWidget,
                       ),
                     ],
@@ -499,18 +519,21 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+                        tooltip: 'Working',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
+                        tooltip: 'Code',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidgetCode()));
                         },
                       ),
                       IconButton(
                         icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+                        tooltip: 'About',
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -549,6 +572,7 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
                       ),
                       IconButton(
                         icon: Icon(FontAwesomeIcons.youtube, color: Colors.red,),
+                        tooltip: 'Watch Video',
                         onPressed: _launchFutureBuilderWidget,
                       ),
                     ],
