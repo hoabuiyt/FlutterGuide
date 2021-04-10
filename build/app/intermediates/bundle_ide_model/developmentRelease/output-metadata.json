@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "BUNDLE",
+    "kind": "RegularFile"
+  },
+  "applicationId": "FlutterGuide.from.debuglabs",
+  "variantName": "developmentRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "outputFile": "../../../outputs/bundle/developmentRelease/FlutterGuide-V3(3.0.0)-development-release.aab"
+    }
+  ]
+}

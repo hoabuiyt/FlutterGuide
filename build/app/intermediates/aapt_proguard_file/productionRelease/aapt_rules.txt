@@ -1,0 +1,3 @@
+-keep class FlutterGuide.from.debuglabs.MainActivity { <init>(); }
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class io.flutter.plugins.urllauncher.WebViewActivity { <init>(); }
