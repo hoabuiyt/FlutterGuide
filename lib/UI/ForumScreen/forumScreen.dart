@@ -25,12 +25,12 @@ final List<String> imgList = [
   'assets/CommunityCarousel/discordBanner.jpeg',
 ];
 
-class CommunityScreen extends StatefulWidget {
+class ForumScreen extends StatefulWidget {
   @override
-  _CommunityScreenState createState() => _CommunityScreenState();
+  _ForumScreenState createState() => _ForumScreenState();
 }
 
-class _CommunityScreenState extends State<CommunityScreen> {
+class _ForumScreenState extends State<ForumScreen> {
   int _current = 0;
 
 
@@ -116,7 +116,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
             color: Colors.blue,
           ),
           title: Text(
-            'Community',
+            'Forum',
             style: GoogleFonts.comfortaa(
                 color: Colors.blue, fontWeight: FontWeight.bold),
           )),
@@ -127,13 +127,16 @@ class _CommunityScreenState extends State<CommunityScreen> {
               height: 25,
             ),
             Center(
-              child: Text(
-                'Welcome to the Flutter community',
-                style: GoogleFonts.comfortaa(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22),
-              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
+                child: Text(
+                  'Welcome to the Flutter community',
+                  style: GoogleFonts.comfortaa(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+              )
             ),
             SizedBox(
               height: 25,
@@ -144,35 +147,20 @@ class _CommunityScreenState extends State<CommunityScreen> {
                 style: GoogleFonts.comfortaa(
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20),
+                    fontSize: 18),
               ),
             ),
             SizedBox(
               height: 10,
             ),
             Center(
-              child: Text(
-                'Get answers to your questions and stay up to',
-                style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 13),
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Center(
-              child: Text(
-                ' date with everything new and exciting happening in the',
-                style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 13),
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Center(
-              child: Text(
-                ' Flutter community by checking out the links below.',
-                style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 13),
-              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
+                child: Text(
+                  'Get answers to your questions and stay up to date with everything new and exciting happening in the Flutter community by checking out the links below.',
+                  style: GoogleFonts.comfortaa(color: Colors.grey, fontSize: 12, height: 1.5),
+                ),
+              )
             ),
             SizedBox(
               height: 25,
@@ -300,8 +288,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                   icon: Image.asset('assets/PNG/flutterLogo.png'),
                   label: Text(
                     'Flutter Events',
-                    style:
-                        GoogleFonts.comfortaa(color: Colors.blue, fontSize: 20),
+                    style: GoogleFonts.comfortaa(color: Colors.blue,),
                   ),
                 ),
               ),

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 // Export Commons
-import 'package:flutter_widget_guide/Common/Widgets/bottomNavigationBar.dart';
+import 'package:flutter_widget_guide/Common/exportCommons.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

@@ -55,9 +55,11 @@ Checkout the <a href="https://github.com/kurubaran18/FlutterGuide/releases" targ
 
 # Latest Release
 
-<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/3.0.0" target="_blank"><b>Flutter Guide - V3(3.0.0)</b></a>
+<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/4.0.0" target="_blank"><b>Flutter Guide - V4(4.0.0)</b></a>
 
 # Previous Release
+<a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/3.0.0" target="_blank"><b>Flutter Guide - V3(3.0.0)</b></a>
+<br><br>
 <a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/2.0.0" target="_blank"><b>Flutter Guide - V2(2.0.0)</b></a>
 <br><br>
 <a href="https://github.com/kurubaran18/FlutterGuide/releases/tag/1.0.1" target="_blank"><b>Flutter Guide - V1(1.0.1)</b></a>

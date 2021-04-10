@@ -6,6 +6,14 @@ import 'package:dart_code_viewer/dart_code_viewer.dart';
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
+// Ion Icons
+import 'package:ionicons/ionicons.dart';
+
+// Platform Alert Dialog
+import 'package:platform_alert_dialog/platform_alert_dialog.dart';
+
+import '../animatedContainer.dart';
+
 void main() {
   runApp(AnimatedContainerWidgetCode());
 }
@@ -17,23 +25,69 @@ class AnimatedContainerWidgetCode extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Animated Container Widget - Code',
       theme: ThemeData(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.black,
-            centerTitle: true,
-            elevation: 0.0,
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white,),
-              onPressed: () {
-                Navigator.pop(context);
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black,),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          title: Text(
+            'Animated Container Widget - Code',
+            overflow: TextOverflow.ellipsis,
+            style: GoogleFonts.comfortaa(fontSize: 15, color: Colors.black,),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidget()));
               },
             ),
-            title: Text(
-              'Animated Container Widget - Code',
-              style: GoogleFonts.comfortaa(),
+            IconButton(
+              icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+              onPressed: () {
+                showDialog<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return PlatformAlertDialog(
+                      title: Text(
+                        'Animated Container',
+                        style: GoogleFonts.comfortaa(fontWeight: FontWeight.bold),
+                      ),
+                      content: SingleChildScrollView(
+                        child: ListBody(
+                          children: <Widget>[
+                            Text(
+                              'Generally, in Flutter a container is a simple widget with well-defined properties like height, width, and color, etc. Whereas, the AnimatedContainer widget is a simple container widget with animations. These types of widgets can be animated by altering the values of their properties which are the same as the Container widget. These types of animation in Flutter is known as ‘Implicit Animation. We will discuss then in detail in this article by building a simple app with AnimatedContainer widget.',
+                              style: GoogleFonts.comfortaa(height: 2),
+                            ),
+                          ],
+                        ),
+                      ),
+                      actions: <Widget>[
+                        PlatformDialogAction(
+                          child: Text(
+                            'OK',
+                            style: GoogleFonts.comfortaa(),
+                          ),
+                          actionType: ActionType.Preferred,
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             )
+          ],
         ),
         body: DartCodeViewer(r'''
 
