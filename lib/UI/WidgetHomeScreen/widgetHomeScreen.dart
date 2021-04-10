@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
+// FontAwesome Icons
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
-// FontAwesome Icons
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// Ion Icons
+import 'package:ionicons/ionicons.dart';
 
 // Platform Alert Dialog
 import 'package:platform_alert_dialog/platform_alert_dialog.dart';
@@ -67,33 +70,37 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                title: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidget()));
-                  },
-                  child: Text(
-                    'Safe Area',
-                    style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
-                  ),
+                title: Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidget()));
+                    },
+                    child: Text(
+                      'Safe Area',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                  )
                 ),
                 trailing: FittedBox(
                   fit: BoxFit.fill,
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.play_circle_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidget()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.code, color: Colors.blue,),
+                        icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafeAreaWidgetCode()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.info_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -145,33 +152,37 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                title: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidget()));
-                  },
-                  child: Text(
-                    'Expanded',
-                    style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
-                  ),
+                title: Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidget()));
+                    },
+                    child: Text(
+                      'Expanded',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                  )
                 ),
                 trailing: FittedBox(
                   fit: BoxFit.fill,
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.play_circle_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidget()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.code, color: Colors.blue,),
+                        icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidgetCode()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.info_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -223,33 +234,37 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                title: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidget()));
-                  },
-                  child: Text(
-                    'Wrap',
-                    style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
-                  ),
+                title: Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidget()));
+                    },
+                    child: Text(
+                      'Wrap',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                  )
                 ),
                 trailing: FittedBox(
                   fit: BoxFit.fill,
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.play_circle_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidget()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.code, color: Colors.blue,),
+                        icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => WrapWidgetCode()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.info_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -301,33 +316,37 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                title: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidget()));
-                  },
-                  child: Text(
-                    'Animated Container',
-                    style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
-                  ),
+                title: Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidget()));
+                    },
+                    child: Text(
+                      'Animated Container',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.comfortaa(color: Colors.blue, fontSize: 15, fontWeight: FontWeight.bold,),
+                    ),
+                  )
                 ),
                 trailing: FittedBox(
                   fit: BoxFit.fill,
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.play_circle_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidget()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.code, color: Colors.blue,),
+                        icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimatedContainerWidgetCode()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.info_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -379,33 +398,37 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card(
               elevation: 0.0,
               child: ListTile(
-                title: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
-                  },
-                  child: Text(
-                    'Opacity',
-                    style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
-                  ),
+                title: Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
+                    },
+                    child: Text(
+                      'Opacity',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                  )
                 ),
                 trailing: FittedBox(
                   fit: BoxFit.fill,
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.play_circle_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.code, color: Colors.blue,),
+                        icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidgetCode()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.info_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           showDialog<void>(
                             context: context,
@@ -457,33 +480,37 @@ class _WidgetHomeScreenState extends State<WidgetHomeScreen> {
             Card (
               elevation: 0.0,
               child: ListTile(
-                title: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
-                  },
-                  child: Text(
-                    'Future Builder',
-                    style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold,),
-                  ),
+                title: Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
+                    },
+                    child: Text(
+                      'Future Builder',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.comfortaa(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                  )
                 ),
                 trailing: FittedBox(
                   fit: BoxFit.fill,
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.play_circle_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidget()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.code, color: Colors.blue,),
+                        icon: Icon(Ionicons.code_slash_outline, color: Colors.blue,),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => FutureBuilderWidgetCode()));
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.info_outline, color: Colors.blue,),
+                        icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
                         onPressed: () {
                           showDialog<void>(
                             context: context,

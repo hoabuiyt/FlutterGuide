@@ -1,8 +1,8 @@
 // [AboutScreen]aboutScreen.dart
 export 'package:flutter_widget_guide/UI/AboutScreen/aboutScreen.dart';
 
-// [CommunityScreen]communityScreen.dart
-export 'package:flutter_widget_guide/UI/CommunityScreen/communityScreen.dart';
+// [ForumScreen]forumScreen.dart
+export 'package:flutter_widget_guide/UI/ForumScreen/forumScreen.dart';
 
 // [SplashScreen]splashScreen.dart
 export 'package:flutter_widget_guide/UI/SplashScreen/splashScreen.dart';

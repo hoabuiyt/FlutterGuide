@@ -6,6 +6,14 @@ import 'package:dart_code_viewer/dart_code_viewer.dart';
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
+// Ion Icons
+import 'package:ionicons/ionicons.dart';
+
+// Platform Alert Dialog
+import 'package:platform_alert_dialog/platform_alert_dialog.dart';
+
+import '../opacityWidget.dart';
+
 void main() {
   runApp(OpacityWidgetCode());
 }
@@ -17,23 +25,69 @@ class OpacityWidgetCode extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Opacity Widget - Code',
       theme: ThemeData(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.black,
-            centerTitle: true,
-            elevation: 0.0,
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white,),
-              onPressed: () {
-                Navigator.pop(context);
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black,),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          title: Text(
+            'Opacity Widget - Code',
+            overflow: TextOverflow.ellipsis,
+            style: GoogleFonts.comfortaa(fontSize: 15, color: Colors.black,),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => OpacityWidget()));
               },
             ),
-            title: Text(
-              'Opacity Widget - Code',
-              style: GoogleFonts.comfortaa(),
+            IconButton(
+              icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+              onPressed: () {
+                showDialog<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return PlatformAlertDialog(
+                      title: Text(
+                        'Opacity',
+                        style: GoogleFonts.comfortaa(fontWeight: FontWeight.bold),
+                      ),
+                      content: SingleChildScrollView(
+                        child: ListBody(
+                          children: <Widget>[
+                            Text(
+                              'The Opacity widget that makes its child partially transparent. This class colors its child into an intermediate buffer and then merges the child back into the scene partially transparent. For values of opacity other than 0.0 and 1.0, this class is relatively expensive as it needs coloring the child into an intermediate buffer. For the value 0.0, the child is simply not colored at all. For the value 1.0, the child is colored without an intermediate buffer.',
+                              style: GoogleFonts.comfortaa(height: 2),
+                            ),
+                          ],
+                        ),
+                      ),
+                      actions: <Widget>[
+                        PlatformDialogAction(
+                          child: Text(
+                            'OK',
+                            style: GoogleFonts.comfortaa(),
+                          ),
+                          actionType: ActionType.Preferred,
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             )
+          ],
         ),
         body: DartCodeViewer(r'''
 

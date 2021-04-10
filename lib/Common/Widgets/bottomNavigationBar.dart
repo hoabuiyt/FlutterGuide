@@ -51,7 +51,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           children: <Widget>[
             WidgetHomeScreen(),
             VideoScreen(),
-            CommunityScreen(),
+            ForumScreen(),
             AboutScreen()
           ],
         ),
@@ -78,7 +78,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             activeColor: Colors.blue,
           ),
           BottomNavyBarItem(
-            title: Text(' Community', style: GoogleFonts.comfortaa()),
+            title: Text(' Forum', style: GoogleFonts.comfortaa()),
             icon: Icon(Ionicons.chatbubbles),
             activeColor: Colors.blue,
           ),

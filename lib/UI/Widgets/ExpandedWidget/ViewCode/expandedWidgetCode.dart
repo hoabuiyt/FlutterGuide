@@ -6,6 +6,14 @@ import 'package:dart_code_viewer/dart_code_viewer.dart';
 // Google Fonts
 import 'package:google_fonts/google_fonts.dart';
 
+// Ion Icons
+import 'package:ionicons/ionicons.dart';
+
+// Platform Alert Dialog
+import 'package:platform_alert_dialog/platform_alert_dialog.dart';
+
+import '../expandedWidget.dart';
+
 void main() {
   runApp(ExpandedWidgetCode());
 }
@@ -17,23 +25,69 @@ class ExpandedWidgetCode extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Expanded Widget - Code',
       theme: ThemeData(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
       ),
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.black,
-            centerTitle: true,
-            elevation: 0.0,
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white,),
-              onPressed: () {
-                Navigator.pop(context);
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black,),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          title: Text(
+            'Expanded Widget - Code',
+            overflow: TextOverflow.ellipsis,
+            style: GoogleFonts.comfortaa(fontSize: 15, color: Colors.black,),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Ionicons.play_circle_outline, color: Colors.blue,),
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandedWidget()));
               },
             ),
-            title: Text(
-              'Expanded Widget - Code',
-              style: GoogleFonts.comfortaa(),
+            IconButton(
+              icon: Icon(Ionicons.information_circle_outline, color: Colors.blue,),
+              onPressed: () {
+                showDialog<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return PlatformAlertDialog(
+                      title: Text(
+                        'Expanded Widget',
+                        style: GoogleFonts.comfortaa(fontWeight: FontWeight.bold),
+                      ),
+                      content: SingleChildScrollView(
+                        child: ListBody(
+                          children: <Widget>[
+                            Text(
+                              'Expanded widget in flutter comes in handy when we want a child widget or children widgets to take all the available space along the main-axis (for Row the main axis is horizontal & vertical for Column).  Expanded widget can be taken as the child of Row, Column, and Flex. And in case if we don’t want to give equal spaces to our children widgets we can distribute the available space as our will using flex factor. Expanded widget is similar to the Flexible widget in flutter, with its fit property set to FlexFit.tight as default. Expanded widget is basically a shorthand of Flexible widget. But if you are planning to build responsive apps or web apps, then you should definitely switch to Flexible to get more fit options.',
+                              style: GoogleFonts.comfortaa(height: 2),
+                            ),
+                          ],
+                        ),
+                      ),
+                      actions: <Widget>[
+                        PlatformDialogAction(
+                          child: Text(
+                            'OK',
+                            style: GoogleFonts.comfortaa(),
+                          ),
+                          actionType: ActionType.Preferred,
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             )
+          ],
         ),
         body: DartCodeViewer(r'''
 

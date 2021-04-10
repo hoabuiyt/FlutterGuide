@@ -36,7 +36,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
           },
         ),
         title: Text(
-          'Wrap Widget',
+          'Animated Container Widget',
           style: GoogleFonts.comfortaa(color: Colors.black),
         ),
       ),
