@@ -1,4 +1,4 @@
-package FlutterGuide.from.debuglabs
+package flutterguide.from.debuglabs
 
 import io.flutter.embedding.android.FlutterActivity
 
