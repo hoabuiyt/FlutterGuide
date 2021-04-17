@@ -89,3 +89,11 @@ $ flutter build apk
 # Getting Started - iOS
 
 **Coming Soon!**
+
+**Show some ❤️ and star the repo to support the project**
+
+# Author(s) ✍️
+
+1. [[Kurubaran Anandhan] @kurubaran18 ](https://github.com/kurubaran18)
+2. [[Gokul S] @LionelGokul ](https://github.com/LionelGokul)
+3. [[Dinesh Kumar] @dineshkumar1407 ](https://github.com/dineshkumar1407)
